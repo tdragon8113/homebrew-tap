@@ -1,6 +1,6 @@
 cask "route-pilot" do
-  version "1.7.1"
-  sha256 "5bea8a3578aaba44281f199031f48f3785603c9c1be2dff3f01b28d0b90d60b6"
+  version "1.7.2"
+  sha256 "f7397aa9998f1a91dd01a8130b2a93d2b2b0fb3c06d3277a986873424ba1730c"
 
   url "https://github.com/tdragon8113/route-pilot/releases/download/v#{version}/RoutePilot.dmg"
   name "RoutePilot"

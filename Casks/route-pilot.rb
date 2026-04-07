@@ -14,12 +14,11 @@ cask "route-pilot" do
 
   app "RoutePilot.app"
 
-  uninstall delete: [
-    "~/Library/LaunchAgents/com.sunny.RoutePilotDaemon.plist",
-  ]
+  uninstall delete: []
 
   zap delete: [
     "/etc/sudoers.d/autoroute",
+    "~/Library/LaunchAgents/com.sunny.RoutePilotDaemon.plist",
   ],
   trash: [
     "~/Library/Application Support/RoutePilot",

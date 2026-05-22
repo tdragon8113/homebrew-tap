@@ -1,6 +1,6 @@
 cask "nexus-tools" do
-  version "0.2.0"
-  sha256 "1baf3f131f0c3eb9dfc8983984ffeda7b33f5fbfe7393f7bb16011360a16ce04"
+  version "0.2.1"
+  sha256 "1da922cebaab67a8098f38350078ffc860647701e07d469b512fd7003696865b"
 
   url "https://github.com/tdragon8113/nexus-tools/releases/download/web-tools-v#{version}/NexusTools.dmg"
   name "Nexus Tools"
@@ -13,6 +13,13 @@ cask "nexus-tools" do
   end
 
   app "Nexus Tools.app"
+
+  postflight do
+    # 清除下载隔离标记，避免 Gatekeeper 提示「已损坏」
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Nexus Tools.app"],
+                   must_succeed: false
+  end
 
   zap trash: [
     "~/Library/Application Support/Nexus Tools",

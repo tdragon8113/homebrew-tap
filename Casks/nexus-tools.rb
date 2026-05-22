@@ -1,10 +1,10 @@
 cask "nexus-tools" do
-  version "1.0.9"
-  sha256 "1beea637940b31a7c024cc9b8953790364270480e0a017da8565f4073bdf6ec2"
+  version "0.2.0"
+  sha256 "1baf3f131f0c3eb9dfc8983984ffeda7b33f5fbfe7393f7bb16011360a16ce04"
 
-  url "https://github.com/tdragon8113/nexus-tools/releases/download/v#{version}/NexusTools.dmg"
-  name "NexusTools"
-  desc "开发者工具箱"
+  url "https://github.com/tdragon8113/nexus-tools/releases/download/web-tools-v#{version}/NexusTools.dmg"
+  name "Nexus Tools"
+  desc "开发者工具箱（Electron 桌面版，Alt+Space 唤起）"
   homepage "https://github.com/tdragon8113/nexus-tools"
 
   livecheck do
@@ -12,12 +12,12 @@ cask "nexus-tools" do
     strategy :github_latest
   end
 
-  app "NexusTools.app"
+  app "Nexus Tools.app"
 
   zap trash: [
-    "~/Library/Application Support/NexusTools",
-    "~/Library/Caches/com.nexus.NexusTools",
-    "~/Library/HTTPStorages/com.nexus.NexusTools",
-    "~/Library/Preferences/com.nexus.NexusTools.plist",
+    "~/Library/Application Support/Nexus Tools",
+    "~/Library/Application Support/nexus-tools",
+    "~/Library/Preferences/com.nexus.tools.plist",
+    "~/Library/Saved Application State/com.nexus.tools.savedState",
   ]
 end

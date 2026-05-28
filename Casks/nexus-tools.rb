@@ -1,6 +1,6 @@
 cask "nexus-tools" do
-  version "0.2.5"
-  sha256 "c9483fe65cbfe70ccd835807ff6642db4122b2616316ab12a4303765e6247007"
+  version "0.2.6"
+  sha256 "cacf513defa4dc6601ea0ce6b1e7cc6ac01abecfa1f062f8ff129b72719495a1"
 
   url "https://github.com/tdragon8113/nexus-tools/releases/download/web-tools-v#{version}/NexusTools.dmg"
   name "Nexus Tools"
